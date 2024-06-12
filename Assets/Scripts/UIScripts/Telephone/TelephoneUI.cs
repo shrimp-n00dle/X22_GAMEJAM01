@@ -12,6 +12,8 @@ public class TelephoneUI : MonoBehaviour
 
     void Start()
      {
+
+        EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.GENERATE_NUMBER,generatePhoneNumber);
     //     for (int i = 0; i < 5; i++)
     //     {
            generatePhoneNumber();
@@ -47,5 +49,10 @@ public class TelephoneUI : MonoBehaviour
 
         //print in UI
         PhoneNumber.text = contactline.ToString();
+     }
+
+     void OnDestroy()
+     {
+        EventBroadcaster.Instance.RemoveObserver(EventNames.Mushroom_Game_Jam.GENERATE_NUMBER);
      }
 }

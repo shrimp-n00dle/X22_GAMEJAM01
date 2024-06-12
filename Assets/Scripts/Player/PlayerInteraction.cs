@@ -26,7 +26,7 @@ public class PlayerInteraction : MonoBehaviour
     void Start()
     {   
     
-        EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.PHONE_CALLING, this.);
+        //EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.PHONE_CALLING););
 
     }
 
@@ -41,7 +41,6 @@ public class PlayerInteraction : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //if the name is a dial
         if (other.gameObject.name == "Dial")
         {
             Debug.Log("Dial");
@@ -62,15 +61,14 @@ public class PlayerInteraction : MonoBehaviour
         //iF its the fruit dime
         } else 
         {
-           // EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.COLLECT_FRUIT_DIME);
+           EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.COLLECT_FRUIT_DIME);
         }
-
     }
 
-    void OnDestroy()
-    {
-       // EventBroadcaster.Instance.RemoveObserver(EventNames.Mushroom_Game_Jam.);
-    }
+    // void OnDestroy()
+    // {
+    //     EventBroadcaster.Instance.RemoveObserver(EventNames.Mushroom_Game_Jam.PHONE_CALLING);
+    // }
 
     public bool compareNumbers(string input, TelephoneUI correctNumber)
     {
@@ -80,7 +78,7 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log("Correct");
 
             //ADDS POINTS TO THE UI 
-           // EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.ADD_SCORE);
+            EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.ADD_SCORE);
 
             bCorrect = true;
         } 
@@ -89,7 +87,7 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log("False");
 
             //DEDUCTS FIVE SECONDS FROM THE UI
-          //   EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.PENTALY_EVENT);
+            EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.PENTALY_EVENT);
             bCorrect = false;
         } 
 
