@@ -50,6 +50,27 @@ public class EventNames {
 		public const string ON_FIRST_SCAN = "FIRST_TARGET_SCAN";
 		public const string ON_FINAL_SCAN = "ON_FINAL_SCAN";
 	}
+
+
+		public class Mushroom_Game_Jam
+	{
+
+		//AVELYN
+		public const string MUSHROOM_SPAWN = "MUSHROOM_SPAWN";
+
+		public const string ADD_SCORE = "ADD_SCORE";
+
+		public const string PENTALY_EVENT = "PENALTY_EVENT";
+
+		//ATASHA
+		public const string COLLECT_FRUIT_DIME = "COLLECT_FRUIT_DIME";
+
+		//JAN
+		public const string PHONE_CALLING = "PHONE_CALLING";
+
+		public const string GENERATE_NUMBER = "GENERATE_NUMBER";
+
+	}
 }
 
 

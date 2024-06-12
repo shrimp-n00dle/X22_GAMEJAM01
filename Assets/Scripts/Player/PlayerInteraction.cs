@@ -26,6 +26,7 @@ public class PlayerInteraction : MonoBehaviour
     void Start()
     {   
     
+        EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.PHONE_CALLING, this.);
 
     }
 
