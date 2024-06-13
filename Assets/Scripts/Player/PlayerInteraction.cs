@@ -8,7 +8,8 @@ using Unity.VisualScripting;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public TelephoneUI correctNumber;
+    /*Telephone*/
+    private TelephoneUI correctNumber;
     public TextMeshProUGUI PrintInput;
 
     public string input;
@@ -118,7 +119,7 @@ public class PlayerInteraction : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-             this.gameObject.transform.Translate(Vector3.up * Time.deltaTime * this.speed);
+             this.gameObject.transform.Translate(Vector3.up * Time.deltaTime * 350.0f);
         }
         else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
