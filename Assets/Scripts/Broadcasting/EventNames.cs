@@ -67,7 +67,7 @@ public class EventNames {
 		//JAN
 		public const string PHONE_CALLING = "PHONE_CALLING";
 
-		public const string TELEPHONE_UI = "TELEPHONE_UI";
+		public const string GENERATE_NUMBER = "GENERATE_NUMBER";
 
 	}
 }
