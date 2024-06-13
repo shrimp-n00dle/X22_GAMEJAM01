@@ -23,12 +23,12 @@ public class TelephoneUI : MonoBehaviour
 
     void Update()
     {
-        //DialInput.text = DialMsg.DialInputString;
-        //to generate a list of phone numbers ONE AT A TIME
-       // if (numberList.Count < 5)
-       // {
-            // generatePhoneNumber();
-       // }
+        // DialInput.text = DialMsg.DialInputString;
+        // to generate a list of phone numbers ONE AT A TIME
+       if (numberList.Count < 5)
+       {
+            generatePhoneNumber();
+       }
     }
 
     private void generatePhoneNumber()
