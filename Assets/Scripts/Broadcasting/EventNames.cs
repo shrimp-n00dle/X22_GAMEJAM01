@@ -62,7 +62,11 @@ public class EventNames {
 		public const string PENTALY_EVENT = "PENALTY_EVENT";
 
 		//ATASHA
+		public const string SPAWN_FRUIT_DIME = "SPAWN_FRUIT_DIME";
+
 		public const string COLLECT_FRUIT_DIME = "COLLECT_FRUIT_DIME";
+
+		public const string DESPAWN_FRUIT_DIME = "DESPAWN_FRUIT_DIME";
 
 		//JAN
 		public const string PHONE_CALLING = "PHONE_CALLING";
