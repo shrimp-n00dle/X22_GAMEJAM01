@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7567643824967483295}
   - component: {fileID: 4990430996302462324}
   m_Layer: 0
-  m_Name: Root ng ina mo
+  m_Name: Child Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1027,7 +1027,7 @@ GameObject:
   - component: {fileID: 734910575984172106}
   - component: {fileID: 1044939008544174701}
   m_Layer: 0
-  m_Name: Root ng ina mo (1)
+  m_Name: Child Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2636,7 +2636,7 @@ GameObject:
   - component: {fileID: 4322292517350250563}
   - component: {fileID: 4202535941265402451}
   m_Layer: 0
-  m_Name: Root ng ina mo
+  m_Name: Child Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3897,7 +3897,7 @@ GameObject:
   - component: {fileID: 4429686337965582969}
   - component: {fileID: 5270448335664698942}
   m_Layer: 0
-  m_Name: Root ng ina mo
+  m_Name: Child Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4701,7 +4701,7 @@ GameObject:
   - component: {fileID: 6026600481868469113}
   - component: {fileID: 6738401033492584964}
   m_Layer: 0
-  m_Name: Root ng ina mo (1)
+  m_Name: Child Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5654,7 +5654,7 @@ GameObject:
   - component: {fileID: 2935233684434951929}
   - component: {fileID: 8963966466382615726}
   m_Layer: 0
-  m_Name: Root ng ina mo (1)
+  m_Name: Child Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6491,7 +6491,7 @@ GameObject:
   - component: {fileID: 8120084111219735664}
   - component: {fileID: 7656452827858285089}
   m_Layer: 0
-  m_Name: Root ng ina mo (1)
+  m_Name: Child Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7295,7 +7295,7 @@ GameObject:
   - component: {fileID: 990609211710890688}
   - component: {fileID: 1582103707328275770}
   m_Layer: 0
-  m_Name: Root ng ina mo
+  m_Name: Child Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8198,7 +8198,7 @@ GameObject:
   - component: {fileID: 953789664524421056}
   - component: {fileID: 7802923312255190814}
   m_Layer: 0
-  m_Name: Root ng ina mo
+  m_Name: Child Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9035,7 +9035,7 @@ GameObject:
   - component: {fileID: 8853825506819903430}
   - component: {fileID: 7496782637184276691}
   m_Layer: 0
-  m_Name: Root ng ina mo (1)
+  m_Name: Child Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
