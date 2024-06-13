@@ -45,4 +45,9 @@ public class TimerScript : MonoBehaviour
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
+    public TMP_Text getTimeText()
+    {
+        return this.timeText;
+    }
 }
