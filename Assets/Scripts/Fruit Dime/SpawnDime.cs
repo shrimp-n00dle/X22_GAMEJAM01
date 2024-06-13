@@ -16,12 +16,12 @@ public class SpawnDime : MonoBehaviour
     {
         this.template.SetActive(false);
 
-        EventBroadcaster.Instance.AddObserver(EventNames.TestEvents.ON_SPAWN_CLICKED, this.OnSpawnEvent);
+        //EventBroadcaster.Instance.AddObserver(EventNames.TestEvents.ON_SPAWN_CLICKED, this.OnSpawnEvent);
     }
 
     void OnDestroy()
     {
-        EventBroadcaster.Instance.RemoveObserver(EventNames.TestEvents.ON_SPAWN_CLICKED);
+        //EventBroadcaster.Instance.RemoveObserver(EventNames.TestEvents.ON_SPAWN_CLICKED);
     }
 
     // Update is called once per frame
