@@ -10,7 +10,9 @@ public class SpawnButton : MonoBehaviour
     //private ScoreManager shrooms;
 
     private int friendCounter = 0;
-    private int friendCap = 100;
+
+    //change later to track combined size of both shroomLists in MushroomSpawn
+    private int friendCap = 15;
 
     public void Start()
     {

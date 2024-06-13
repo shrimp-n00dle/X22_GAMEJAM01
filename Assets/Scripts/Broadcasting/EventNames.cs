@@ -53,11 +53,11 @@ public class EventNames {
 
 	public class Mushroom_Game_Jam
 	{
-
 		//AVELYN
 		public const string ON_SPAWNER_CLICKED = "ON_SPAWNER_CLICKED";
+		public const string SCENE_CHANGE = "SCENE_CHANGE";
 
-		public const string ADD_SCORE = "ADD_SCORE";
+        public const string ADD_SCORE = "ADD_SCORE";
 
 		public const string PENTALY_EVENT = "PENALTY_EVENT";
 
