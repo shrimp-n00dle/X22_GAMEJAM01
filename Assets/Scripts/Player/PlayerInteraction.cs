@@ -14,6 +14,8 @@ public class PlayerInteraction : MonoBehaviour
 
     public string input;
 
+    public float empty;
+
     private bool bCorrect = false;
 
     [SerializeField] private float speed = 10.0f;
@@ -26,6 +28,7 @@ public class PlayerInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
+        empty = 0.0f;
     
         //EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.PHONE_CALLING););
 
@@ -89,12 +92,13 @@ public class PlayerInteraction : MonoBehaviour
 
             //DEDUCTS FIVE SECONDS FROM THE UI
             EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.PENTALY_EVENT);
+
             bCorrect = false;
         } 
 
         //reset the string to empty
-      //  input = empty.ToString();
-        PrintInput.text = input.ToString();
+        input = null;
+        PrintInput.text = " ";
 
         return bCorrect;
     }
@@ -119,7 +123,7 @@ public class PlayerInteraction : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-             this.gameObject.transform.Translate(Vector3.up * Time.deltaTime * 350.0f);
+             this.gameObject.transform.Translate(Vector3.up * Time.deltaTime * 250.0f);
         }
         else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
