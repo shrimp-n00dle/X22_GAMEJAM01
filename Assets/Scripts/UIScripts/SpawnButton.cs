@@ -10,7 +10,7 @@ public class SpawnButton : MonoBehaviour
     [SerializeField] private TMP_Text friendText;
 
     private float friendCounter = 0;
-    private float friendCap = 100;
+    private float friendCap = 500;
 
     private int increment = 1;
 
