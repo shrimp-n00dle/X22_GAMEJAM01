@@ -42,8 +42,6 @@ public class PlayerInteraction : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name + "ontrigger debug log");
-
         if (other.gameObject.name == "Dial")
         {
             compareNumbers(input, correctNumber);

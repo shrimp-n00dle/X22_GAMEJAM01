@@ -1,11 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class FruitDimePoolable : APoolable
 {
     private float yOld = 0.0f;
     private float yNew = 1.0f;
+
+    [SerializeField] private TMP_Text inputField;
+    private string numDimes;
+
+    private int newNumDime;
+
+    public void OnCollect()
+    {
+        this.numDimes = this.inputField.GetComponent<TMP_Text>().text;
+
+        this.newNumDime = int.Parse(this.numDimes);
+
+        newNumDime++;
+
+        this.inputField.GetComponent<TMP_Text>().text = newNumDime.ToString();
+
+        Destroy(this.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
