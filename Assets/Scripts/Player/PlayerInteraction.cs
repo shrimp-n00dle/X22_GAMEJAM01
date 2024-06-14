@@ -37,7 +37,7 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         correctNumber = GameObject.FindGameObjectWithTag("CANVAS_UI").GetComponent<TelephoneUI>().contactline;
+        correctNumber = GameObject.FindGameObjectWithTag("CANVAS_UI").GetComponent<TelephoneUI>().contactline;
          
         bCorrect = false;
         PrintInput.text = input;
@@ -74,7 +74,6 @@ public class PlayerInteraction : MonoBehaviour
         
         if(other.gameObject.name == "Fruit Dime" || other.gameObject.name == "Fruit Dime(Clone)") 
         {
-            Debug.Log("Event fucking finally");
             EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.COLLECT_FRUIT_DIME);
         }
     }

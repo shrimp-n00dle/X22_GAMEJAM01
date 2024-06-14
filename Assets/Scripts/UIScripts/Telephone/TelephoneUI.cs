@@ -42,6 +42,7 @@ public class TelephoneUI : MonoBehaviour
         //if the numebr is correctly inpuuted
         if (bCorrect) 
         {  
+            EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.ON_SPAWNER_CLICKED);
           generatePhoneNumber();
         }
     }

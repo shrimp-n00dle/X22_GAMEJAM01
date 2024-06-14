@@ -59,7 +59,7 @@ public class EventNames {
 
         public const string ADD_SCORE = "ADD_SCORE";
 
-		public const string PENTALY_EVENT = "PENALTY_EVENT";
+		public const string PENALTY_EVENT = "PENALTY_EVENT";
 
 		//ATASHA
 		public const string SPAWN_FRUIT_DIME = "SPAWN_FRUIT_DIME";
