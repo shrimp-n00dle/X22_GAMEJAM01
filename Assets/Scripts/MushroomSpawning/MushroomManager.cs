@@ -19,7 +19,7 @@ public class MushroomManager : MonoBehaviour
 
     void OnDestroy()
     {
-        EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.ON_SPAWNER_CLICKED, this.OnRequestPoolable);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.Mushroom_Game_Jam.ON_SPAWNER_CLICKED);
     }
 
     // Update is called once per frame
@@ -30,7 +30,6 @@ public class MushroomManager : MonoBehaviour
 
     private void OnRequestPoolable()
     {
-        //oh my fucking goodness this is STILL not exponential.
         //2 x (2 x increment)
         for (int i = 0; i < 2; i++)
         {

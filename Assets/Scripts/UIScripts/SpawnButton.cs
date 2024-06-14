@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class SpawnButton : MonoBehaviour
 {
     [SerializeField] private TMP_Text friendText;
-    //private ScoreManager shrooms;
 
-    private int friendCounter = 0;
+    private float friendCounter = 0;
+    private float friendCap = 100;
 
-    //change later to track combined size of both shroomLists in MushroomSpawn
-    private int friendCap = 15;
+    private int increment = 1;
 
     public void Start()
     {
@@ -26,11 +26,31 @@ public class SpawnButton : MonoBehaviour
 
     public void OnButtonClicked()
     {
-        if(this.friendCounter < friendCap)
+        /*
+         * Hard-coded solution, based off of the logic that OnButtonClicked()
+         * will ONLY be triggered on correct inputs
+        */
+
+        if (this.friendCounter < friendCap)
         {
+            float f = Mathf.FloorToInt(Mathf.Pow(2, increment));
+
             EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.ON_SPAWNER_CLICKED);
-            this.friendCounter += 2;
+            this.friendCounter += f;
+
             this.friendText.text = "Friends: " + this.friendCounter;
-        }        
+
+            this.increment++;
+        }
+        else if (this.friendCounter >= friendCap)
+        {
+            this.friendCounter = this.friendCap;
+            this.friendText.text = "Friends: " + this.friendCounter;
+
+            this.friendCounter = 0;
+            this.increment = 1;
+
+            SceneManager.LoadScene(2);
+        }
     }
 }

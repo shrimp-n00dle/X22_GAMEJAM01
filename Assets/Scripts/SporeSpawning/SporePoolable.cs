@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MushroomPoolable : APoolable
+public class SporePoolable : APoolable
 {
-    [SerializeField] private Rigidbody mushroomRB;
-    
+    [SerializeField] private Rigidbody sporeRB;
+
+    private const float Y_BOUNDARY = 0.5f;
     private Vector3 originPos;
 
+    // Start is called before the first frame update
     void Awake()
     {
         this.originPos = this.transform.position;
@@ -16,10 +18,10 @@ public class MushroomPoolable : APoolable
     // Update is called once per frame
     void Update()
     {
-        //don't need rigidbody script for this part
-        //just need to spawn the shrooms
-        //note that if I added force to this, it wouldn't fall on a random position
-        //it'd just shoot right to (0,0,0)
+        if(this.transform.localPosition.y <= Y_BOUNDARY)
+        {
+            this.poolRef.ReleasePoolable(this);
+        }        
     }
 
     public override void Initialize()
@@ -37,9 +39,6 @@ public class MushroomPoolable : APoolable
 
     public override void Release()
     {
-        //this just makes it so that it doesn't move again I guess
-        //oh so this thing is so it doesn't go out of bounds.
-        //well oop fall physics is gonna make it go out of bounds anyway.
-        this.mushroomRB.velocity = Vector3.zero;
+        this.sporeRB.velocity = Vector3.zero;
     }
 }
