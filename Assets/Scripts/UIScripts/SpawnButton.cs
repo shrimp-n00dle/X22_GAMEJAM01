@@ -16,7 +16,14 @@ public class SpawnButton : MonoBehaviour
 
     public void Start()
     {
+        EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.ON_MUSHROOM_SPAWN, this.OnButtonClicked);
         this.friendText.text = "Friends: " + this.friendCounter;
+    }
+
+    public void Destroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver(EventNames.Mushroom_Game_Jam.ON_MUSHROOM_SPAWN);
+
     }
 
     public void Update()

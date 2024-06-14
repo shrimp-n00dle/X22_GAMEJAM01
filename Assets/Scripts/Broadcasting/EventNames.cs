@@ -55,6 +55,7 @@ public class EventNames {
 	{
 		//AVELYN
 		public const string ON_SPAWNER_CLICKED = "ON_SPAWNER_CLICKED";
+		public const string ON_MUSHROOM_SPAWN = "ON_MUSHROOM_SPAWN";
 		public const string SCENE_CHANGE = "SCENE_CHANGE";
 
         public const string ADD_SCORE = "ADD_SCORE";
