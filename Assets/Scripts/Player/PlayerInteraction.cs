@@ -16,7 +16,7 @@ public class PlayerInteraction : MonoBehaviour
 
     public float empty;
 
-    public bool bCorrect = false;
+    public bool bCorrect;
 
     [SerializeField] private float speed = 10.0f;
     bool bPressed = false;
@@ -29,7 +29,7 @@ public class PlayerInteraction : MonoBehaviour
     void Start()
     {   
         empty = 0.0f;
-        correctNumber = GameObject.FindGameObjectWithTag("CANVAS_UI").GetComponent<TelephoneUI>().contactline;
+       
         //EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.PHONE_CALLING););
 
     }
@@ -37,6 +37,9 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         correctNumber = GameObject.FindGameObjectWithTag("CANVAS_UI").GetComponent<TelephoneUI>().contactline;
+         
+        bCorrect = false;
         PrintInput.text = input;
 
         this.InputListen();

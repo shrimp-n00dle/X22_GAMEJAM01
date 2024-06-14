@@ -64,8 +64,6 @@ public class TelephoneUI : MonoBehaviour
 
         //print in UI
         PhoneNumber.text = contactline.ToString();
-
-        bCorrect = false;
      }
 
      void OnDestroy()
