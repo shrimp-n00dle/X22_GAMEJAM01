@@ -15,7 +15,7 @@ public class TelephoneUI : MonoBehaviour
     void Start()
      {
 
-        bCorrect = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>().bCorrect;
+        
         EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.GENERATE_NUMBER,generatePhoneNumber);
     //     for (int i = 0; i < 5; i++)
     //     {
@@ -26,6 +26,8 @@ public class TelephoneUI : MonoBehaviour
 
     void Update()
     {
+
+        bCorrect = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>().bCorrect;
         // to generate a list of phone numbers ONE AT A TIME
 
        
@@ -34,9 +36,14 @@ public class TelephoneUI : MonoBehaviour
          //   generatePhoneNumber();
         // }
 
+        PhoneNumber.text = contactline.ToString();
+
 
         //if the numebr is correctly inpuuted
-        if (bCorrect) generatePhoneNumber();
+        if (bCorrect) 
+        {  
+          generatePhoneNumber();
+        }
     }
 
     private void generatePhoneNumber()
@@ -57,6 +64,8 @@ public class TelephoneUI : MonoBehaviour
 
         //print in UI
         PhoneNumber.text = contactline.ToString();
+
+        bCorrect = false;
      }
 
      void OnDestroy()

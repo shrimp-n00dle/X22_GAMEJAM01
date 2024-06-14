@@ -47,8 +47,10 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (other.gameObject.name == "Dial")
         {
-            Debug.Log("Dial");
             compareNumbers(input,correctNumber);
+
+            //clear the text 
+            input = input.Remove(input.Length - input.Length);
         }
         //if the name is a number
         else if (other.gameObject.name != "FruitDime")
@@ -57,7 +59,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 if (other.gameObject.name == i.ToString()) 
                 {
-                    Debug.Log(i);
+                    //Debug.Log(i);
                     input  += i.ToString();
                 }
                     
@@ -98,12 +100,11 @@ public class PlayerInteraction : MonoBehaviour
             EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.PENTALY_EVENT);
 
             bCorrect = false;
+            
         } 
 
         //reset the string to empty
-        int reset =  int.Parse(input) - int.Parse(input);
-        input = reset.ToString();
-        Debug.Log("Hello");
+
 
         return bCorrect;
     }
