@@ -570,7 +570,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY AGAIN
+  m_text: PLAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1398,7 +1398,7 @@ GameObject:
   - component: {fileID: 2029898041}
   - component: {fileID: 2029898040}
   - component: {fileID: 2029898039}
-  - component: {fileID: 2029898038}
+  - component: {fileID: 2029898042}
   m_Layer: 5
   m_Name: PlayGame
   m_TagString: Untagged
@@ -1426,18 +1426,6 @@ RectTransform:
   m_AnchoredPosition: {x: 220, y: 35}
   m_SizeDelta: {x: 200, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2029898038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029898036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cff7969d93e4ac4c92e2a1d51cee8fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2029898039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1482,7 +1470,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2029898038}
+      - m_Target: {fileID: 2029898042}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: MoveToScene
         m_Mode: 3
@@ -1532,6 +1520,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029898036}
   m_CullTransparentMesh: 1
+--- !u!114 &2029898042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029898036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cff7969d93e4ac4c92e2a1d51cee8fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2120127124
 GameObject:
   m_ObjectHideFlags: 0
