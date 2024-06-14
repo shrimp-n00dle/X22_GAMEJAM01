@@ -8,20 +8,20 @@ public class FruitDimePoolable : APoolable
     private float yOld = 0.0f;
     private float yNew = 1.0f;
 
-    [SerializeField] private TMP_Text inputField;
+    [SerializeField] public TMP_Text inputField;
     private string numDimes;
 
-    private int newNumDime;
+    private int newNumDime = 0;
 
     public void OnCollect()
     {
-        this.numDimes = this.inputField.GetComponent<TMP_Text>().text;
+        this.numDimes = this.inputField.text;
 
         this.newNumDime = int.Parse(this.numDimes);
 
-        newNumDime++;
+        newNumDime += 1;
 
-        this.inputField.GetComponent<TMP_Text>().text = newNumDime.ToString();
+        this.inputField.text = newNumDime.ToString();
 
         Destroy(this.gameObject);
     }
@@ -29,6 +29,9 @@ public class FruitDimePoolable : APoolable
     // Start is called before the first frame update
     void Start()
     {
+        newNumDime = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>().fruitCounter;
+
+        EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.GET_DIME_UI, this.updateUI);
         
     }
 
@@ -42,6 +45,12 @@ public class FruitDimePoolable : APoolable
         {
             StartCoroutine(this.Despawn());
         }
+    }
+
+    public void updateUI()
+    {
+        newNumDime -= 1;
+        this.inputField.text = newNumDime.ToString();
     }
 
     public override void Initialize() //initializes the property of this object.
@@ -71,5 +80,10 @@ public class FruitDimePoolable : APoolable
     public GameObjectPool getPoolRef()
     {
         return this.poolRef;
+    }
+
+    public void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver(EventNames.Mushroom_Game_Jam.GET_DIME_UI);
     }
 }

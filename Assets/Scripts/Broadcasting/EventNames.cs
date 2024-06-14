@@ -69,6 +69,8 @@ public class EventNames {
 
 		public const string DESPAWN_FRUIT_DIME = "DESPAWN_FRUIT_DIME";
 
+		public const string GET_DIME_UI = "GET_DIME_UI";
+
 		//JAN
 		public const string GENERATE_NUMBER = "GENERATE_NUMBER";
 

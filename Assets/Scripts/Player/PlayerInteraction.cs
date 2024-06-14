@@ -16,7 +16,10 @@ public class PlayerInteraction : MonoBehaviour
 
     public bool bCorrect;
 
-    /*Player Movmeent*/
+    //Fruit Dime counter
+    public int fruitCounter = 0;
+
+    /*Player Movment*/
     [SerializeField] private float speed = 10.0f;
 
     private enum Direction {FORWARD,BACKWARD,LEFT,RIGHT,NONE}
@@ -44,10 +47,18 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (other.gameObject.name == "Dial")
         {
-            compareNumbers(input, correctNumber);
+            if (fruitCounter > 0)
+            {
+                compareNumbers(input, correctNumber);
+                //clear the text 
+                input = input.Remove(input.Length - input.Length);
 
-            //clear the text 
-            input = input.Remove(input.Length - input.Length);
+                //decrements fruit coutner because you used one
+                fruitCounter -= 1;
+                EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.GET_DIME_UI);
+
+            } else Debug.Log("CANT CALL");
+
         }
         //if the name is a number
         else if (other.gameObject.name != "Fruit Dime" || other.gameObject.name != "Fruit Dime(Clone)")
@@ -66,6 +77,7 @@ public class PlayerInteraction : MonoBehaviour
         
         if(other.gameObject.name == "Fruit Dime" || other.gameObject.name == "Fruit Dime(Clone)") 
         {
+            fruitCounter += 1;
             EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.COLLECT_FRUIT_DIME);
         }
     }
@@ -77,9 +89,6 @@ public class PlayerInteraction : MonoBehaviour
         if (float.Parse(input) == correctNumber)
         {
             Debug.Log("Correct");
-
-            //ADDS POINTS TO THE UI
-            //EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.ADD_SCORE);
 
             bCorrect = true;
         } 

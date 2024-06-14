@@ -8,7 +8,6 @@ public class SpawnPhone : MonoBehaviour
 
     public void Start()
     {
-      //GameObject.FindGameObjectWithTag("C").SetActive(false);
         cover.SetActive(true);
         cover2.SetActive(true);
         cover3.SetActive(true);
