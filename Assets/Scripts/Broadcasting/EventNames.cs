@@ -69,8 +69,6 @@ public class EventNames {
 		public const string DESPAWN_FRUIT_DIME = "DESPAWN_FRUIT_DIME";
 
 		//JAN
-		public const string PHONE_CALLING = "PHONE_CALLING";
-
 		public const string GENERATE_NUMBER = "GENERATE_NUMBER";
 
 	}

@@ -14,12 +14,10 @@ public class PlayerInteraction : MonoBehaviour
 
     public string input;
 
-    public float empty;
-
     public bool bCorrect;
 
+    /*Player Movmeent*/
     [SerializeField] private float speed = 10.0f;
-    bool bPressed = false;
 
     private enum Direction {FORWARD,BACKWARD,LEFT,RIGHT,NONE}
 
@@ -28,10 +26,6 @@ public class PlayerInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        empty = 0.0f;
-       
-        //EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.PHONE_CALLING););
-
     }
 
     // Update is called once per frame
@@ -78,11 +72,6 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    // void OnDestroy()
-    // {
-    //     EventBroadcaster.Instance.RemoveObserver(EventNames.Mushroom_Game_Jam.PHONE_CALLING);
-    // }
-
     public bool compareNumbers(string input, float correctNumber)
     {
 
@@ -101,7 +90,7 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log("False");
 
             //DEDUCTS FIVE SECONDS FROM THE UI
-            EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.PENTALY_EVENT);
+            EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.PENALTY_EVENT);
 
             bCorrect = false;
             
