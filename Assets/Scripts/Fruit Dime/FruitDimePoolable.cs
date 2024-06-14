@@ -39,7 +39,7 @@ public class FruitDimePoolable : APoolable
     IEnumerator Despawn()
     {
         //Wait for 10 seconds
-        yield return new WaitForSeconds(25);
+        yield return new WaitForSeconds(5);
         this.poolRef.ReleasePoolable(this);
     }
 
@@ -47,5 +47,10 @@ public class FruitDimePoolable : APoolable
     public override void OnActivate() //throws this event when this object has been activated from the pool.
     {
         this.transform.position = this.transform.parent.transform.position; // spawner position
+    }
+
+    public GameObjectPool getPoolRef()
+    {
+        return this.poolRef;
     }
 }

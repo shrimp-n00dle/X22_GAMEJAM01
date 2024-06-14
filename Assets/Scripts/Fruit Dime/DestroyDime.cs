@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class DestroyDime : MonoBehaviour
 {
-    private float yOld = 0;
-    private float yNew = 0;
+    private void OnCollect()
+    {
+        Destroy(this.gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver(EventNames.Mushroom_Game_Jam.COLLECT_FRUIT_DIME);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        //EventBroadcaster.Instance.AddObserver();
+        EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.COLLECT_FRUIT_DIME, this.OnCollect);
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.yOld = this.yNew;
-        this.yNew = this.gameObject.transform.position.y;
-        if(yOld == yNew)
-        {
-            Destroy(this.gameObject, 5);
-        }
+        
     }
 }

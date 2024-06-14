@@ -48,15 +48,17 @@ public class PlayerInteraction : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name + "ontrigger debug log");
+
         if (other.gameObject.name == "Dial")
         {
-            compareNumbers(input,correctNumber);
+            compareNumbers(input, correctNumber);
 
             //clear the text 
             input = input.Remove(input.Length - input.Length);
         }
         //if the name is a number
-        else if (other.gameObject.name != "FruitDime")
+        else if (other.gameObject.name != "Fruit Dime" || other.gameObject.name != "Fruit Dime(Clone)")
         {
             for (int i = 1; i <= 9; i++)
             {
@@ -68,9 +70,12 @@ public class PlayerInteraction : MonoBehaviour
                     
             }
         //iF its the fruit dime
-        } else 
+        }
+        
+        if(other.gameObject.name == "Fruit Dime" || other.gameObject.name == "Fruit Dime(Clone)") 
         {
-           EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.COLLECT_FRUIT_DIME);
+            Debug.Log("Event fucking finally");
+            EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.COLLECT_FRUIT_DIME);
         }
     }
 
