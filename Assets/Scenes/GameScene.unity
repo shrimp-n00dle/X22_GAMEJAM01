@@ -16616,7 +16616,7 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.02080654, g: 0.1792453, b: 0.014373446, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
