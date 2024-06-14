@@ -1,0 +1,33 @@
+A FUNGUS'S GUIDE TO WORLD DOMINATION!
+<GROUP MEMBERS>
+Limcuando, Atasha Roshela
+Maronilla, Mary Avelyn
+Vingno, Jan Elizabeth
+
+<RESOURCES>
+CODE
+> TimerScript.cs Script Source
+How to make a countdown timer in Unity (in minutes + seconds) (John French)
+- https://gamedevbeginner.com/how-to-make-countdown-timer-in-unity-minutes-seconds/
+
+> FollowPlayer.cs Script Source
+Smooth Camera Follow in Unity | Bite-Sized Tutorials ()
+- https://www.youtube.com/watch?v=ZPUtQ4pGGWs
+
+ASSETS
+> Mushroom Picture
+- https://pixabay.com/photos/mushroom-mushrooms-sponge-moss-4252538/
+
+> Mushroom Prefabs
+Low Poly Mushrooms Pack (PaperSy)
+- https://assetstore.unity.com/packages/3d/vegetation/low-poly-mushrooms-pack-205460
+
+> Skyboxes
+Fantasy Skybox FREE (Render Knight)
+- https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-skybox-free-18353
+
+> Music
+PeriTune - Beautiful Life(Royalty Free Music) | Chill music hits 🏆
+- https://www.youtube.com/watch?v=H6NGZMwRORY
+Background Music for Your Videos | Woody Woods ✓
+- https://youtu.be/gUQkqNHRnFI?si=5IW2uJV6OTyjshvT
