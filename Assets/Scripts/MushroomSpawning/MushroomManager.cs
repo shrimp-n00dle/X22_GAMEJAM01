@@ -30,18 +30,15 @@ public class MushroomManager : MonoBehaviour
 
     private void OnRequestPoolable()
     {
-        //2 x (2 x increment)
-        for (int i = 0; i < 2; i++)
+        //2 x increment
+        for(int j = 0; j < increment; j++)
         {
-            //2 x increment
-            for(int j = 0; j < increment; j++)
-            {
-                if(this.shroomPool.HasObjectAvailable(1))
-                    this.shroomPool.RequestPoolable();
-            }
-            //assume that every call of OnRequestPoolable() takes place on successful input
-            this.increment++;
+            if(this.shroomPool.HasObjectAvailable(1))
+               this.shroomPool.RequestPoolable();
         }
+        
+        //assume that every call of OnRequestPoolable() takes place on successful input
+        this.increment++;
     }
 
 }

@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoseScreen.unity
     guid: 038c1d3e0972fdc419f79115a840cf1b
+  - enabled: 1
+    path: Assets/Scenes/TutorialScreen.unity
+    guid: 7c7b052847b90a34fa4d89a1eaa0c86e
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
