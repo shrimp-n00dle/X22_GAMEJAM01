@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FruitDimeManager : MonoBehaviour
 {
-    [SerializeField] private GameObjectPool pinballPool;
+    [SerializeField] private GameObjectPool fruitDimePool;
+    [SerializeField] private float spawnMin = 10.0f;
+    [SerializeField] private float spawnMax = 15.0f;
 
     private float ticks = 0.0f;
     private float spawnInterval = 5.0f;
@@ -12,7 +14,7 @@ public class FruitDimeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.pinballPool.Initialize();
+        this.fruitDimePool.Initialize();
     }
 
     // Update is called once per frame
@@ -22,12 +24,12 @@ public class FruitDimeManager : MonoBehaviour
         {
             this.ticks += Time.deltaTime;
         }
-        else if(this.pinballPool.HasObjectAvailable(1))
+        else if(this.fruitDimePool.HasObjectAvailable(1))
         {
             this.ticks = 0.0f;
-            this.pinballPool.RequestPoolable();
+            this.fruitDimePool.RequestPoolable();
 
-            this.spawnInterval = Random.Range(5.0f, 10.0f);
+            this.spawnInterval = Random.Range(this.spawnMin, this.spawnMax);
         }
     }
 }
