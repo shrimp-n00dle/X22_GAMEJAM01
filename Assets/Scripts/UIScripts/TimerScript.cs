@@ -15,6 +15,8 @@ public class TimerScript : MonoBehaviour
     {
         // Starts the timer automatically
         timerIsRunning = true;
+        EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.PENALTY_EVENT, this.PenaltyEvent);
+
     }
 
     void Update()
@@ -49,5 +51,11 @@ public class TimerScript : MonoBehaviour
     public TMP_Text getTimeText()
     {
         return this.timeText;
+    }
+
+    private void PenaltyEvent()
+    {
+        this.timeRemaining -= 5;
+        
     }
 }

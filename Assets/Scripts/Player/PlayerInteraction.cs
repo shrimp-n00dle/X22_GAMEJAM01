@@ -80,8 +80,8 @@ public class PlayerInteraction : MonoBehaviour
         {
             Debug.Log("Correct");
 
-            //ADDS POINTS TO THE UI 
-            EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.ADD_SCORE);
+            //ADDS POINTS TO THE UI
+            //EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.ADD_SCORE);
 
             bCorrect = true;
         } 
