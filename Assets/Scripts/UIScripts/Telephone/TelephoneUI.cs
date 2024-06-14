@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class TelephoneUI : MonoBehaviour
 {
-
     private bool bCorrect;
     public TextMeshProUGUI PhoneNumber;
     public float contactline = 0;
@@ -28,13 +27,6 @@ public class TelephoneUI : MonoBehaviour
     {
 
         bCorrect = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>().bCorrect;
-        // to generate a list of phone numbers ONE AT A TIME
-
-       
-       //if (numberList.Count < 5)
-       //{
-         //   generatePhoneNumber();
-        // }
 
         PhoneNumber.text = contactline.ToString();
 
@@ -42,8 +34,9 @@ public class TelephoneUI : MonoBehaviour
         //if the numebr is correctly inpuuted
         if (bCorrect) 
         {  
+            GameObject.FindGameObjectWithTag("Cover").GetComponent<SpawnPhone>().Start();
             EventBroadcaster.Instance.PostEvent(EventNames.Mushroom_Game_Jam.ON_SPAWNER_CLICKED);
-          generatePhoneNumber();
+            generatePhoneNumber();
         }
     }
 

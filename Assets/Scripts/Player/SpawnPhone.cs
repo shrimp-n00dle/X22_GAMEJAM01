@@ -6,8 +6,9 @@ public class SpawnPhone : MonoBehaviour
 {
     [SerializeField] public GameObject cover,cover2,cover3,cover4;
 
-    void Start()
+    public void Start()
     {
+      //GameObject.FindGameObjectWithTag("C").SetActive(false);
         cover.SetActive(true);
         cover2.SetActive(true);
         cover3.SetActive(true);
@@ -16,7 +17,7 @@ public class SpawnPhone : MonoBehaviour
         openPhone();
     }
 
-    private void openPhone()
+    public void openPhone()
     {
           int open = Random.Range(1,4);
 
