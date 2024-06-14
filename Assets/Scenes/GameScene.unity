@@ -14640,9 +14640,10 @@ GameObject:
   - component: {fileID: 827191855}
   - component: {fileID: 827191859}
   - component: {fileID: 827191860}
+  - component: {fileID: 827191861}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: CANVAS_UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14771,6 +14772,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friendText: {fileID: 328794788}
+--- !u!114 &827191861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827191854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0e76711714c32459dce0d7287045e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PhoneNumber: {fileID: 1328706527}
+  contactline: 0
+  numberList: []
 --- !u!1001 &835691790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22821,7 +22837,7 @@ GameObject:
   - component: {fileID: 1328706528}
   - component: {fileID: 1328706527}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NumberText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34740,6 +34756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1197006836730729220, guid: b41ef6b0fcdee1c4b9e62aa1102626d7, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2006159900295350718, guid: b41ef6b0fcdee1c4b9e62aa1102626d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.2
@@ -34867,6 +34887,7 @@ MonoBehaviour:
   PrintInput: {fileID: 220144878}
   input: 
   empty: 0
+  bCorrect: 0
   speed: 10
 --- !u!1001 &2030918971
 PrefabInstance:

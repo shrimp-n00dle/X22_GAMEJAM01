@@ -9,14 +9,14 @@ using Unity.VisualScripting;
 public class PlayerInteraction : MonoBehaviour
 {
     /*Telephone*/
-    private TelephoneUI correctNumber;
+    private float correctNumber;
     public TextMeshProUGUI PrintInput;
 
     public string input;
 
     public float empty;
 
-    private bool bCorrect = false;
+    public bool bCorrect = false;
 
     [SerializeField] private float speed = 10.0f;
     bool bPressed = false;
@@ -29,7 +29,7 @@ public class PlayerInteraction : MonoBehaviour
     void Start()
     {   
         empty = 0.0f;
-    
+        correctNumber = GameObject.FindGameObjectWithTag("CANVAS_UI").GetComponent<TelephoneUI>().contactline;
         //EventBroadcaster.Instance.AddObserver(EventNames.Mushroom_Game_Jam.PHONE_CALLING););
 
     }
@@ -37,7 +37,7 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PrintInput.text = input.ToString();
+        PrintInput.text = input;
 
         this.InputListen();
         this.Move();
@@ -74,10 +74,14 @@ public class PlayerInteraction : MonoBehaviour
     //     EventBroadcaster.Instance.RemoveObserver(EventNames.Mushroom_Game_Jam.PHONE_CALLING);
     // }
 
-    public bool compareNumbers(string input, TelephoneUI correctNumber)
+    public bool compareNumbers(string input, float correctNumber)
     {
         //comparision
-        if (input.CompareTo(correctNumber.PhoneNumber.ToString()) == 0)
+
+        //there are two ways to approach this...compare the strings or compare the ints
+        //if (input.CompareTo(correctNumber.PhoneNumber.ToString()) == 0)
+        Debug.Log("CORRECT NUMBER is "  + correctNumber);
+        if (float.Parse(input) == correctNumber)
         {
             Debug.Log("Correct");
 
@@ -97,8 +101,9 @@ public class PlayerInteraction : MonoBehaviour
         } 
 
         //reset the string to empty
-        input = null;
-        PrintInput.text = " ";
+        int reset =  int.Parse(input) - int.Parse(input);
+        input = reset.ToString();
+        Debug.Log("Hello");
 
         return bCorrect;
     }
@@ -124,6 +129,10 @@ public class PlayerInteraction : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Space))
         {
              this.gameObject.transform.Translate(Vector3.up * Time.deltaTime * 250.0f);
+        }
+        else if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            input = input.Remove(input.Length - 1);
         }
         else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
