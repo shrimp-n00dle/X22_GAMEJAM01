@@ -86,10 +86,7 @@ public class PlayerInteraction : MonoBehaviour
 
     public bool compareNumbers(string input, float correctNumber)
     {
-        //comparision
 
-        //there are two ways to approach this...compare the strings or compare the ints
-        //if (input.CompareTo(correctNumber.PhoneNumber.ToString()) == 0)
         Debug.Log("CORRECT NUMBER is "  + correctNumber);
         if (float.Parse(input) == correctNumber)
         {
@@ -110,9 +107,6 @@ public class PlayerInteraction : MonoBehaviour
             bCorrect = false;
             
         } 
-
-        //reset the string to empty
-
 
         return bCorrect;
     }
