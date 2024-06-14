@@ -57,7 +57,7 @@ public class SpawnButton : MonoBehaviour
             this.friendCounter = 0;
             this.increment = 1;
 
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
         }
     }
 }

@@ -12,12 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene.unity
     guid: 16b9df6d0f2d57245a789d5a0beeb9ab
   - enabled: 1
-    path: Assets/Scenes/WinScreen.unity
+    path: Assets/Scenes/TutorialScreen.unity
     guid: e3c2b01f40943fb4b9869c6f2fc8d509
   - enabled: 1
     path: Assets/Scenes/LoseScreen.unity
     guid: 038c1d3e0972fdc419f79115a840cf1b
   - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: a4f2c2ffd2e49ee4caed0b10a3a7740c
+  - enabled: 0
     path: Assets/Scenes/TutorialScreen.unity
     guid: 7c7b052847b90a34fa4d89a1eaa0c86e
   m_configObjects: {}
